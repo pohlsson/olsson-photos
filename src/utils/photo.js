@@ -1,10 +1,10 @@
-const isMobileDevice = () => {
-    return ( ( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 ) );
-};
+import isMobile from "is-mobile";
 
-const ALLOWED_NUM_PHOTOS_ON_ROW = isMobileDevice() ? [1, 2] : [1, 2, 4, 5];
+const ALLOWED_NUM_PHOTOS_ON_ROW = isMobile() ? [1, 2] : [1, 2, 4, 5];
 
 export const generateRows = (rows = [], photosLeft) => {
+    console.log("ALLOWED", isMobile());
+
     if (photosLeft.length === 0) {
         return rows;
     } else {
