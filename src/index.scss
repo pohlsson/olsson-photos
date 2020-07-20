@@ -1,0 +1,15 @@
+@import './scss/colors.scss';
+
+html,body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: $primary-medium;
+}
+
+@font-face {
+  font-family: 'HeaderFont';
+  src: local('HeaderFont'), url(./fonts/Halimun.ttf) format('truetype');
+}

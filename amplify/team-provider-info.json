@@ -1,0 +1,20 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-olssonphotos-dev-145233-authRole",
+            "UnauthRoleArn": "arn:aws:iam::534856440641:role/amplify-olssonphotos-dev-145233-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::534856440641:role/amplify-olssonphotos-dev-145233-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "amplify-olssonphotos-dev-145233-deployment",
+            "UnauthRoleName": "amplify-olssonphotos-dev-145233-unauthRole",
+            "StackName": "amplify-olssonphotos-dev-145233",
+            "StackId": "arn:aws:cloudformation:eu-west-1:534856440641:stack/amplify-olssonphotos-dev-145233/3aa1d7f0-c2ac-11ea-bc90-02fa7ab4594c",
+            "AmplifyAppId": "d2zjw6lwjbzpez"
+        },
+        "categories": {
+            "auth": {
+                "olssonphotosefec102c": {}
+            }
+        }
+    }
+}

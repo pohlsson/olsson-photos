@@ -1,0 +1,40 @@
+.photoModal {
+  position: fixed;
+  z-index: 100;
+  top: 80px;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  display: flex;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5;
+  background-color: black;
+}
+
+.photo {
+  position: relative;
+  box-shadow: -15px 10px 41px -9px rgba(0,0,0,0.75);
+
+  img {
+    width: 900px;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  z-index: 100;
+  font-size: 26px;
+  font-weight: bold;
+}

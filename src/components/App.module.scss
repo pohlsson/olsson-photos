@@ -1,0 +1,19 @@
+@import "../scss/colors";
+
+.app {
+  height: 100%;
+  display: flex;
+}
+
+.photoGrid {
+  flex: 1;
+  padding: 80px 200px 200px 200px;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+}
+
+.sideMenu {
+  flex-basis: 100px;
+}

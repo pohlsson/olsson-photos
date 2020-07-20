@@ -1,0 +1,15 @@
+{
+	"auth": {
+		"olssonphotosefec102c": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	},
+	"storage": {
+		"photos": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}

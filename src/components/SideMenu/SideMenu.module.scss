@@ -1,0 +1,16 @@
+@import '../../scss/colors.scss';
+
+.sideMenu {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background-color: $primary-light;
+}
+
+.alignLeft {
+    left: 0;
+}
+
+.alignRight {
+  right: 0;
+}
