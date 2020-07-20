@@ -3,7 +3,6 @@ import isMobile from "is-mobile";
 const ALLOWED_NUM_PHOTOS_ON_ROW = isMobile() ? [1, 2] : [1, 2, 4, 5];
 
 export const generateRows = (rows = [], photosLeft) => {
-    console.log("ALLOWED", isMobile());
 
     if (photosLeft.length === 0) {
         return rows;
