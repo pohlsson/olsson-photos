@@ -4,10 +4,12 @@ import classNames from 'classnames';
 
 const Photo = ({src, className}) => {
     return (
-        <div className={classNames(styles.photoWrapper, className)}>
-            <div className={styles.overlay} />
-            <img src={src} className={className} />
-        </div>
+        <>
+            <img
+                src={src}
+                className={classNames(styles.photo, className)}
+            />
+        </>
     )
 };
 
