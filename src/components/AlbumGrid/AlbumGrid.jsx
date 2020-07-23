@@ -2,6 +2,7 @@ import React from "react";
 import styles from './AlbumGrid.module.scss';
 
 const AlbumGrid = ({photos, className}) => {
+    console.log("pasS", process.env.REACT_APP_ADMIN_PASSWORD);
 
     return (
         <div className={className}>
