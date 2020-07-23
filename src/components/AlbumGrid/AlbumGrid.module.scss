@@ -4,7 +4,6 @@
   background-color: $primary-medium;
   display: flex;
   padding: 20px 20px 0;
-  width: 750px;
 
   &:last-child {
     padding-bottom: 20px;
@@ -16,9 +15,14 @@
 }
 
 .info {
+  width: 300px;
   font-family: Mermaid;
   padding-left: 20px;
   color: $copy-dark;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 
   p {
     font-size: 20px;
