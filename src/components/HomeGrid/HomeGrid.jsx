@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import styles from './PhotoGrid.module.scss';
+import styles from './HomeGrid.module.scss';
 import PhotoModal from "./PhotoModal/PhotoModal";
 import classNames from 'classnames';
 import {generateRows} from "../../utils/photo";
 import Photo from "./Photo/Photo";
 
-const PhotoGrid = ({photos, className}) => {
+const HomeGrid = ({photos, className}) => {
     const [selectedPhoto, setSelectedPhoto] = useState(null);
     const [rows, setRows] = useState([]);
 
@@ -78,4 +78,4 @@ const PhotoGrid = ({photos, className}) => {
     )
 };
 
-export default PhotoGrid;
+export default HomeGrid;
