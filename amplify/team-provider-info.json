@@ -13,7 +13,9 @@
         },
         "categories": {
             "auth": {
-                "olssonphotosefec102c": {}
+                "olssonphotosefec102c": {
+                    "hostedUIProviderCreds": "[]"
+                }
             }
         }
     }

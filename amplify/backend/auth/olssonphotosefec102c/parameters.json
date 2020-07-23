@@ -1,6 +1,6 @@
 {
     "identityPoolName": "olssonphotosefec102c_identitypool_efec102c",
-    "allowUnauthenticatedIdentities": true,
+    "allowUnauthenticatedIdentities": false,
     "resourceNameTruncated": "olssonefec102c",
     "userPoolName": "olssonphotosefec102c_userpool_efec102c",
     "autoVerifiedAttributes": [
@@ -45,10 +45,15 @@
             "Arn"
         ]
     },
-    "useDefault": "default",
+    "useDefault": "defaultSocial",
     "usernameAttributes": [
         "email"
     ],
     "userPoolGroupList": [],
-    "dependsOn": []
+    "dependsOn": [],
+    "hostedUI": true,
+    "hostedUIDomainName": "olssonphotos1983cf8c-1983cf8c",
+    "authProvidersUserPool": [],
+    "hostedUIProviderMeta": "[]",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://peter-photos/admin/\"],\"LogoutURLs\":[\"https://peter-photos/admin/\"]}"
 }
