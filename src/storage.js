@@ -9,14 +9,12 @@ const addPhotoMetaData = async photos => {
         const photo = photos[i];
         const url = await Storage.get(photo.key);
         const fileName = photo.key.split('/')[1];
-        if (photoMetadata[fileName] !== undefined) {
-            photosWithMetadata.push({
-                title: photoMetadata[fileName].title,
-                description: photoMetadata[fileName].description,
-                album: photoMetadata[fileName].album,
-                url
-            });
-        }
+        photosWithMetadata.push({
+            title: photoMetadata[fileName] ? photoMetadata[fileName].title : null,
+            description: photoMetadata[fileName] ? photoMetadata[fileName].description : null,
+            album: photoMetadata[fileName] ? photoMetadata[fileName].album : null,
+            url
+        });
     }
     return photosWithMetadata;
 };
