@@ -5,13 +5,25 @@
   display: flex;
   padding: 20px 20px 0;
 
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+
   &:last-child {
     padding-bottom: 20px;
+
+    @media (max-width: 768px) {
+      padding: 0;
+    }
   }
 }
 
 .photo {
   box-shadow: 4px 3px 5px -4px rgba(0,0,0,0.75);
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .info {
