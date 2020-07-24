@@ -1,6 +1,6 @@
 {
     "identityPoolName": "olssonphotosefec102c_identitypool_efec102c",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "olssonefec102c",
     "userPoolName": "olssonphotosefec102c_userpool_efec102c",
     "autoVerifiedAttributes": [
