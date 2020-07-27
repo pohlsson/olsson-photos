@@ -1,13 +1,18 @@
 import React from "react";
 import styles from './AlbumGrid.module.scss';
 
-const AlbumGrid = ({photos, className}) => {
-    console.log(process.env.REACT_APP_ADMIN_PAWWSORD);
+const CLOUDFRONT_BASE_PATH = 'http://d20nvzox00abva.cloudfront.net/public/albums/';
+
+const AlbumGrid = ({photos, album,  className}) => {
     return (
         <div className={className}>
             {photos.map(photo => (
                 <div className={styles.photoSection}>
-                    <img src={photo.url} width="500px" className={styles.photo}/>
+                    <img
+                        src={CLOUDFRONT_BASE_PATH + album + "/" + photo.fileName}
+                        width="500px"
+                        className={styles.photo}
+                    />
                     <div className={styles.info}>
                         <h2>{photo.title}</h2>
                         <p>

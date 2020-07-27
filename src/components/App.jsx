@@ -20,7 +20,7 @@ function App() {
         <div className="App" className={styles.app}>
             <Header/>
             <SideMenu align='left'/>
-            <AlbumGrid className={styles.photoGrid} photos={photos} />
+            <AlbumGrid  album="Costa Rica 2013" photos={photos} className={styles.photoGrid}/>
             <SideMenu align='right'/>
         </div>
     );
