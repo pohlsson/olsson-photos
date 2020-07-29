@@ -5,23 +5,30 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import SideMenu from "./SideMenu/SideMenu";
 import styles from './App.module.scss';
 import Header from "./Header/Header";
-import {usePhotos} from "../hooks/usePhotos";
-import { Auth } from 'aws-amplify'
 import AlbumGrid from "./AlbumGrid/AlbumGrid";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+} from "react-router-dom";
 
 Amplify.configure(awsconfig);
 
 function App() {
-    const [photos, errors] = usePhotos();
-
-    console.log(photos)
-
     return (
-        <div className="App" className={styles.app}>
-            <Header/>
-            <SideMenu align='left'/>
-            <AlbumGrid  album="Costa Rica 2013" photos={photos} className={styles.photoGrid}/>
-            <SideMenu align='right'/>
+        <div className={styles.app}>
+            <Router>
+                <Header/>
+                <SideMenu align='left'/>
+                <Switch>
+                    <Route path="/album">
+                        <AlbumGrid  album="Costa Rica 2013" className={styles.photoGrid}/>
+                    </Route>
+                    <Route>
+
+                    </Route>
+                </Switch>
+            </Router>
         </div>
     );
 }

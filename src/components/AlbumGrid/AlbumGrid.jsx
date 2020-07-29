@@ -1,26 +1,19 @@
-import React from "react";
+import React, {useEffect, useRef, useState} from "react";
 import styles from './AlbumGrid.module.scss';
+import {usePhotos} from "../../hooks/usePhotos";
+import {getElementsFromList} from "../../utils/list";
+import {PhotoSection} from "./PhotoSection/PhotoSection";
 
-const CLOUDFRONT_BASE_PATH = 'http://d20nvzox00abva.cloudfront.net/public/albums/';
+const INITIAL_NUM_PHOTOS = 3;
 
-const AlbumGrid = ({photos, album,  className}) => {
+const AlbumGrid = ({album,  className}) => {
+
+    const [photos, errors] = usePhotos();
+
     return (
         <div className={className}>
-            {photos.map(photo => (
-                <div className={styles.photoSection}>
-                    <img
-                        src={CLOUDFRONT_BASE_PATH + album + "/" + photo.fileName}
-                        width="500px"
-                        className={styles.photo}
-                    />
-                    <div className={styles.info}>
-                        <h2>{photo.title}</h2>
-                        <p>
-                            {photo.description}
-                        </p>
-                    </div>
-                </div>
-            ))}
+            <div className={styles.albumBackground} />
+            {photos.map(photo => <PhotoSection key={photo.fileName} photo={photo} last />)}
         </div>
     )
 };

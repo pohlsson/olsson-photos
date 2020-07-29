@@ -1,10 +1,34 @@
 @import '../../scss/colors.scss';
 
 .sideMenu {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  z-index: 1;
+  top: 80px;
   height: 100%;
   background-color: $primary-light;
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
+    .link {
+      display: flex;
+      flex-direction: row;
+
+      a {
+        color: $copy-dark;
+      }
+
+      a:hover {
+        color: $copy-light;
+      }
+
+      p {
+        text-align: right;
+      }
+    }
+  }
 }
 
 .alignLeft {

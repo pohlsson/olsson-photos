@@ -6,15 +6,42 @@
   left: 0;
   width: 100%;
   height: 80px;
-  padding-left: 20px;
   background-color: $primary-dark;
   border-bottom: 2px solid $secondary-dark;
+  display: flex;
+  z-index: 10;
+
   h1 {
+    margin-left: 20px;
+    flex: 1;
     color: $primary-light;
     font-family: HeaderFont;
     @media (max-width: 768px) {
       font-size: 20px;
       margin-top: 34px;
+    }
+  }
+
+  .links {
+    display: flex;
+    padding-top: 2px;
+
+    .link {
+      height: 100%;
+      width: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      font-size: 25px;
+
+      a {
+        color: $copy-dark;
+      }
+
+      a:hover {
+        color: $copy-light;
+      }
     }
   }
 }

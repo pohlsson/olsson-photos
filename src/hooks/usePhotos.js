@@ -6,6 +6,7 @@ export const usePhotos = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
+        console.log("HEEEREEE");
         const fetch = async () => {
             try {
                const result = await fetchPhotosInAlbums();
