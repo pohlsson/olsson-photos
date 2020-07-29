@@ -1,10 +1,7 @@
-import React, {useEffect, useRef, useState} from "react";
+import React from "react";
 import styles from './AlbumGrid.module.scss';
 import {usePhotos} from "../../hooks/usePhotos";
-import {getElementsFromList} from "../../utils/list";
 import {PhotoSection} from "./PhotoSection/PhotoSection";
-
-const INITIAL_NUM_PHOTOS = 3;
 
 const AlbumGrid = ({album,  className}) => {
 

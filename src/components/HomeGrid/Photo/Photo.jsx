@@ -3,6 +3,7 @@ import styles from './Photo.module.scss';
 import classNames from 'classnames';
 
 const Photo = ({src, className}) => {
+    console.log(src)
     return (
         <>
             <img

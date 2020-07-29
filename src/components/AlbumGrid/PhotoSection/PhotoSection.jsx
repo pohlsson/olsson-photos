@@ -1,42 +1,17 @@
 import styles from "./PhotoSection.module.scss";
 import React, {useEffect, useRef} from "react";
-import LazyLoad from 'react-lazyload';
-
-const CLOUDFRONT_BASE_PATH = 'http://d20nvzox00abva.cloudfront.net/public/albums/';
+import {CLOUDFRONT_BASE_PATH} from "../../../constants/clodfront";
 
 export const PhotoSection = ({photo, onScrollDown}) => {
 
-    const scrollRef = useRef();
-
-    useEffect(() => {
-        if (onScrollDown) {
-            onScrollDown(scrollRef.current?.getBoundingClientRect().top);
-        }
-    }, [onScrollDown]);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const top = scrollRef.current ? scrollRef.current.getBoundingClientRect().top : 0;
-            onScrollDown(top);
-        };
-
-        if (onScrollDown) {
-            window.addEventListener('scroll', handleScroll);
-        }
-
-        return () => window.removeEventListener('scroll', handleScroll)
-    }, []);
-
     return (
-        <div className={styles.photoSection} ref={scrollRef}>
-            <LazyLoad>
+        <div className={styles.photoSection}>
                 <img
-                    src={CLOUDFRONT_BASE_PATH + photo.album + "/" + photo.fileName}
+                    src={CLOUDFRONT_BASE_PATH + 'albums/' + photo.album + "/" + photo.fileName}
                     width="500px"
                     alt=""
                     className={styles.photo}
                 />
-            </LazyLoad>
             <div className={styles.info}>
                 <h2>{photo.title}</h2>
                 <p>

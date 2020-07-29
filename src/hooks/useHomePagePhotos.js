@@ -1,15 +1,15 @@
 import {useEffect, useState} from "react";
-import {fetchAlbums} from "../storage";
+import {fetchPhotosInHome} from "../storage";
 
-export const useAlbums = () => {
-    const [albums, setAlbums] = useState([]);
+export const useHomePagePhotos = () => {
+    const [photos, setPhotos] = useState([]);
     const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetch = async () => {
             try {
-                const result = await fetchAlbums();
-                setAlbums(result);
+                const result = await fetchPhotosInHome();
+                setPhotos(result);
             } catch (error) {
                 setError(error);
             }
@@ -17,6 +17,6 @@ export const useAlbums = () => {
         fetch();
     }, []);
 
-    return [albums, error];
+    return [photos, error];
 };
 

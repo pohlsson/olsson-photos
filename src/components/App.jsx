@@ -11,6 +11,7 @@ import {
     Switch,
     Route,
 } from "react-router-dom";
+import HomeGrid from "./HomeGrid/HomeGrid";
 
 Amplify.configure(awsconfig);
 
@@ -22,10 +23,10 @@ function App() {
                 <SideMenu align='left'/>
                 <Switch>
                     <Route path="/album">
-                        <AlbumGrid  album="Costa Rica 2013" className={styles.photoGrid}/>
+                        <AlbumGrid album="Costa Rica 2013" className={styles.photoGrid}/>
                     </Route>
                     <Route>
-
+                        <HomeGrid />
                     </Route>
                 </Switch>
             </Router>

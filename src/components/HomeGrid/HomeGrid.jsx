@@ -4,16 +4,23 @@ import PhotoModal from "./PhotoModal/PhotoModal";
 import classNames from 'classnames';
 import {generateRows} from "../../utils/photo";
 import Photo from "./Photo/Photo";
+import {useHomePagePhotos} from "../../hooks/useHomePagePhotos";
 
-const HomeGrid = ({photos, className}) => {
+const HomeGrid = ({className}) => {
     const [selectedPhoto, setSelectedPhoto] = useState(null);
     const [rows, setRows] = useState([]);
 
+    const [photos, error] = useHomePagePhotos();
+
+    console.log(rows)
     useEffect(() => {
-        setRows(generateRows(photos))
+        if(photos.length > 0) {
+            setRows(generateRows(photos))
+        }
     }, [photos]);
 
     const renderRow = row => {
+        console.log(row)
         switch (row.length) {
             case 1:
                 return (
