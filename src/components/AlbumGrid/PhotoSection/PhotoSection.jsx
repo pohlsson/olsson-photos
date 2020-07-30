@@ -3,7 +3,6 @@ import React from "react";
 import {CLOUDFRONT_BASE_PATH} from "../../../constants/clodfront";
 
 export const PhotoSection = ({photo}) => {
-
     return (
         <div className={styles.photoSection}>
                 <img
