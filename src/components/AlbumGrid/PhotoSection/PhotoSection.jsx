@@ -1,8 +1,8 @@
 import styles from "./PhotoSection.module.scss";
-import React, {useEffect, useRef} from "react";
+import React from "react";
 import {CLOUDFRONT_BASE_PATH} from "../../../constants/clodfront";
 
-export const PhotoSection = ({photo, onScrollDown}) => {
+export const PhotoSection = ({photo}) => {
 
     return (
         <div className={styles.photoSection}>

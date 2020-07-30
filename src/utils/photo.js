@@ -18,3 +18,25 @@ export const generateRowsRecursive = (rows = [], photosLeft) => {
 export const generateRows = photos => {
     return generateRowsRecursive([], photos);
 };
+
+export const paginatePhotos = (photos, pageSize) => {
+    const paginatedPhotos = [];
+    for(let i = 0; i < photos.length; i += 1) {
+        const page = [];
+        for(let j = 0; j < pageSize; j += 1) {
+            if(i + j < photos.length) {
+                page.push(photos[i + j]);
+            }
+        }
+        paginatedPhotos.push(page);
+    }
+    return paginatedPhotos;
+};
+
+export const sortByName = (a, b) => {
+    const fileNameA = a.fileName.split(' ');
+    const fileNameB = b.fileName.split(' ');
+    const numberA = parseInt(fileNameA[fileNameA.length -1], 10);
+    const numberB = parseInt(fileNameB[fileNameB.length - 1], 10);
+    return numberA - numberB;
+};

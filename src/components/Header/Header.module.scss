@@ -17,15 +17,15 @@
     font-size: 24px;
     color: $primary-light;
     font-family: HeaderFont;
-    @media (max-width: 768px) {
-      font-size: 20px;
-      margin-top: 34px;
-    }
   }
 
   .links {
     display: flex;
     padding-top: 2px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
 
     .link {
       height: 100%;
@@ -42,6 +42,38 @@
 
       a:hover {
         color: $copy-light;
+      }
+    }
+  }
+  .hamburger {
+    display: none;
+    color: $primary-light;
+
+    @media (max-width: 768px) {
+      display: block;
+      margin-right: 25px;
+      margin-top: 30px;
+    }
+
+  }
+  .hamburgerMenu {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top: 80px;
+    background-color: $primary-dark;
+    border-bottom: 2px solid $secondary-light;
+
+    .link {
+      height: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      font-size: 25px;
+
+      a {
+        color: $copy-dark;
       }
     }
   }

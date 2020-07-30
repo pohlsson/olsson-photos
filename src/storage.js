@@ -1,6 +1,7 @@
 import {Storage} from 'aws-amplify';
 import photoMetadata from './photoMetadata';
 import {CLOUDFRONT_BASE_PATH} from "./constants/clodfront";
+import {sortByName} from "./utils/photo";
 
 const ALBUM_BASE_PATH = 'albums/';
 const HOME_BASE_PATH = 'home/';
@@ -27,7 +28,8 @@ const removeEmptyFolders = file => !file.key.split("/").includes("");
 export const fetchPhotosInAlbums = async () => {
     const filesInAlbums = await Storage.list(ALBUM_BASE_PATH);
     const filteredFilesInAlbum = filesInAlbums.filter(removeEmptyFolders);
-    return await addPhotoMetaData(filteredFilesInAlbum);
+    const photosWithMetadata = await addPhotoMetaData(filteredFilesInAlbum);
+    return photosWithMetadata.sort(sortByName);
 };
 
 export const fetchPhotosInHome = async () => {
